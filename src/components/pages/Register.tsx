@@ -12,7 +12,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LoginIcon from "@mui/icons-material/Login";
 
-export function Login() {
+export function Register() {
   const widthValue = 7 / 9;
   return (
     <Container
@@ -35,9 +35,15 @@ export function Login() {
           margin: "5rem 0",
         }}
       >
-        <Typography variant={"h5"} sx={{ margin: "1rem" }}>
-          Log in to Couponify
+        <Typography variant={"h4"} sx={{ margin: "1rem" }}>
+          Register
         </Typography>
+        <TextField
+          id="outlined-basic"
+          label="Name"
+          variant="outlined"
+          sx={{ width: widthValue }}
+        />
         <TextField
           id="outlined-basic"
           label="Email Address"
@@ -50,13 +56,19 @@ export function Login() {
           variant="outlined"
           sx={{ width: widthValue }}
         />
+        <TextField
+          id="outlined-basic"
+          label="Confirm Password"
+          variant="outlined"
+          sx={{ width: widthValue }}
+        />
         <Button
           sx={{ width: widthValue }}
           variant={"contained"}
           size={"large"}
           startIcon={<LoginIcon />}
         >
-          Login
+          Register
         </Button>
         <Container disableGutters>
           <Divider sx={{ margin: "0.5rem 0" }}>or</Divider>
@@ -82,8 +94,8 @@ export function Login() {
         <Container disableGutters>
           <Divider sx={{ margin: "0.5rem 0" }} />
         </Container>
-        <Typography>Don't have an account?</Typography>
-        <Button variant={"contained"}>Sign Up</Button>
+        <Typography>Already have an account?</Typography>
+        <Button variant={"contained"}>Sign In</Button>
       </Paper>
     </Container>
   );
