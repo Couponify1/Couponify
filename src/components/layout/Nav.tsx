@@ -21,7 +21,6 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import LoginIcon from "@mui/icons-material/Login";
-import { updateDrawer } from "../../store/actions/drawer";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -164,10 +163,7 @@ export default function Nav() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar
-        position="fixed"
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
-      >
+      <AppBar position="static">
         <Container>
           <Toolbar>
             <IconButton
@@ -176,9 +172,6 @@ export default function Nav() {
               color="inherit"
               aria-label="open drawer"
               sx={{ mr: 2 }}
-              onClick={() => {
-                updateDrawer();
-              }}
             >
               <MenuIcon />
             </IconButton>

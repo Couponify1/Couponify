@@ -1,11 +1,8 @@
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import { drawerReducer } from "./reducers/Drawer";
+import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({
-  reducer: {
-    drawer: drawerReducer,
-  },
-  middleware: [...getDefaultMiddleware()],
+  reducer: {},
+  middleware: [],
 });
 
 export type RootState = ReturnType<typeof store.getState>;
