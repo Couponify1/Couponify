@@ -52,11 +52,15 @@ export function Categories() {
 
   const linkObjects = [
     {
-      text: "Categories",
+      text: "Wallet",
       icon: <CategoryIcon />,
     },
     {
-      text: "Filter",
+      text: "Coupons",
+      icon: <FilterAltIcon />,
+    },
+    {
+      text: "Payments",
       icon: <FilterAltIcon />,
     },
   ];
@@ -84,9 +88,6 @@ export function Categories() {
                 <ListItem button key={nanoid(5)}>
                   <ListItemIcon>{obj.icon}</ListItemIcon>
                   <ListItemText primary={obj.text} />
-                  <ListItemIcon>
-                    <ArrowDropDownIcon />
-                  </ListItemIcon>
                 </ListItem>
               ))}
             </List>

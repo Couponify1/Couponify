@@ -9,6 +9,8 @@ import { Login } from "./components/pages/Login";
 import { Register } from "./components/pages/Register";
 import { Categories } from "./components/pages/Categories";
 import ChangePassword from "./components/pages/ChangePassword";
+import { Dashboard } from "./components/pages/Dashboard";
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -18,6 +20,7 @@ function App() {
         <Route path={"/login"} element={<Login />} />
         <Route path={"/register"} element={<Register />} />
         <Route path={"/changepassword"} element={<ChangePassword />} />
+        <Route path={"/dashboard"} element={<Dashboard />} />
       </Routes>
     </ThemeProvider>
   );
