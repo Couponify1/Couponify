@@ -69,6 +69,8 @@ export const Dashboard = () => {
     return { from, to, amount, date };
   }
 
+  let width = window.innerWidth;
+
   const rows = [
     createData("James", "Me", 6.0, 24),
     createData("Me", "Sam", 9.0, 37),
@@ -170,16 +172,16 @@ export const Dashboard = () => {
             My Coupons
           </Typography>{" "}
           <Grid container spacing={2}>
-            <Grid item xs={12} xl={2} md={3} sm={4}>
+            <Grid item xs={12} xl={2} md={3} sm={6}>
               <Coupon />
             </Grid>
-            <Grid item xs={12} xl={2} md={3} sm={4}>
+            <Grid item xs={12} xl={2} md={3} sm={6}>
               <Coupon />
             </Grid>
-            <Grid item xs={12} xl={2} md={3} sm={4}>
+            <Grid item xs={12} xl={2} md={3} sm={6}>
               <Coupon />
             </Grid>
-            <Grid item xs={12} xl={2} md={3} sm={4}>
+            <Grid item xs={12} xl={2} md={3} sm={6}>
               <Coupon />
             </Grid>
           </Grid>
@@ -192,11 +194,7 @@ export const Dashboard = () => {
             My Payments
           </Typography>{" "}
           <TableContainer variant="outlined" component={Paper}>
-            <Table
-              sx={{ minWidth: 650 }}
-              size="small"
-              aria-label="a dense table"
-            >
+            <Table size="small" aria-label="a dense table">
               <TableHead>
                 <TableRow>
                   <TableCell>S.no</TableCell>
