@@ -52,15 +52,11 @@ export function Categories() {
 
   const linkObjects = [
     {
-      text: "Wallet",
+      text: "Categories",
       icon: <CategoryIcon />,
     },
     {
-      text: "Coupons",
-      icon: <FilterAltIcon />,
-    },
-    {
-      text: "Payments",
+      text: "Filter",
       icon: <FilterAltIcon />,
     },
   ];

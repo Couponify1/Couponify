@@ -208,6 +208,13 @@ export default function Nav() {
               >
                 <Typography> Login</Typography>
               </Button>
+              <Button
+                size="small"
+                onClick={() => navigate("/dashboard")}
+                color="inherit"
+              >
+                <Typography> Dashboard</Typography>
+              </Button>
               <IconButton
                 size="large"
                 edge="end"
