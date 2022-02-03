@@ -142,6 +142,30 @@ export default function Nav() {
           </Badge>
         </IconButton>
         Login{" "}
+      </MenuItem><MenuItem>
+        <IconButton
+          size="large"
+          aria-label="show 4 new mails"
+          color="inherit"
+          onClick={() => navigate("/payment")}
+        >
+          <Badge color="error">
+            <LoginIcon />
+          </Badge>
+        </IconButton>
+        Payments{" "}
+      </MenuItem><MenuItem>
+        <IconButton
+          size="large"
+          aria-label="show 4 new mails"
+          color="inherit"
+          onClick={() => navigate("/dashboard")}
+        >
+          <Badge color="error">
+            <LoginIcon />
+          </Badge>
+        </IconButton>
+        Dashboard{" "}
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -214,6 +238,12 @@ export default function Nav() {
                 color="inherit"
               >
                 <Typography> Dashboard</Typography>
+              </Button><Button
+                size="small"
+                onClick={() => navigate("/payment")}
+                color="inherit"
+              >
+                <Typography> Payments</Typography>
               </Button>
               <IconButton
                 size="large"
