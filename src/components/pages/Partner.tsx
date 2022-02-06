@@ -15,7 +15,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import CategoryIcon from "@mui/icons-material/Category";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import AddIcon from "@mui/icons-material/Add";
 import { nanoid } from "@reduxjs/toolkit";
 import Coupon from "../utility/Coupon";
 
@@ -46,7 +46,7 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
   }),
 }));
 
-export function Categories() {
+export default function Partner() {
   const drawerState = useSelector((state: RootState) => state.drawer);
   const theme = useTheme();
 
@@ -58,6 +58,10 @@ export function Categories() {
     {
       text: "Filter",
       icon: <FilterAltIcon />,
+    },
+    {
+      text: "Add Coupon",
+      icon: <AddIcon />,
     },
   ];
 
@@ -79,7 +83,9 @@ export function Categories() {
         >
           <Toolbar />
           <Box sx={{ overflow: "auto" }}>
-            
+            <Typography variant="h6" my="1rem" paddingLeft={"1rem"}>
+              Partner Dashboard
+            </Typography>
             <List>
               {linkObjects.map((obj, index) => (
                 <ListItem button key={nanoid(5)}>
@@ -97,7 +103,7 @@ export function Categories() {
             marginTop={"4rem"}
             marginBottom="2rem"
           >
-            Browse Coupons
+            Our Coupons
           </Typography>
           <Grid container spacing={2}>
             <Grid item xs={12} xl={2} md={3} sm={6}>

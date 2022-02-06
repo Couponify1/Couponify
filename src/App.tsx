@@ -13,6 +13,7 @@ import { Dashboard } from "./components/pages/Dashboard";
 import Checkout from "./components/pages/Payments/Checkout";
 import AddCoupon from "./components/pages/AddCoupon";
 import Contact from "./components/pages/Contact";
+import Partner from "./components/pages/Partner";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path={"/payment"} element={<Checkout />} />
         <Route path={"/add-coupon"} element={<AddCoupon />} />
         <Route path={"/contact"} element={<Contact />} />
+        <Route path={"/partner"} element={<Partner />} />
       </Routes>
     </ThemeProvider>
   );
